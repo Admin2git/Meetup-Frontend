@@ -7,7 +7,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 export const Main = ({ searchTerm }) => {
   const [eventType, setEventType] = useState("Both");
   const { data, loading, error } = useFetch(
-    "https://meetup-backend-seven.vercel.app/events"
+    "https://meetup-backend-nine.vercel.app/events"
   );
   // const {
   //   data: searchData,

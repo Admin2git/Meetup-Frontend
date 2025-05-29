@@ -5,7 +5,7 @@ import { Header } from "../components/Header";
 
 export const EventDetails = () => {
   const { data, loading, error } = useFetch(
-    "https://meetup-backend-seven.vercel.app/events"
+    "https://meetup-backend-nine.vercel.app/events"
   );
   console.log(data);
 
