@@ -105,10 +105,16 @@ export const Main = ({ searchTerm }) => {
         </div>
       </div>
 
-      {loading && <p>Loading events...</p>}
-      {error && <p>Error loading events</p>}
-
-      {filteredEvents && filteredEvents.length > 0 ? (
+      {loading ? (
+        <p
+          className="d-flex justify-content-center align-items-center"
+          style={{ height: "50vh" }}
+        >
+          Loading events...
+        </p>
+      ) : error ? (
+        <p>Error loading events</p>
+      ) : filteredEvents && filteredEvents.length > 0 ? (
         <div className="row mt-1">
           {filteredEvents.map((event) => (
             <div className="col-md-4 p-3" key={event._id}>
